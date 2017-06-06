@@ -33,6 +33,12 @@
 /* Define to 1 if we have full pthread support */
 #define CAIRO_HAS_REAL_PTHREAD 1
 
+#define CAIRO_HAS_GLESV2_SURFACE 1
+
+#define CAIRO_HAS_NSGLES_FUNCTIONS 1
+
+#define CAIRO_GL_COMPOSITOR "msaa"
+
 /* Define to 1 if libspectre is available */
 /* #undef CAIRO_HAS_SPECTRE */
 

@@ -1332,6 +1332,12 @@ _cairo_surface_create_scratch (cairo_surface_t	    *other,
 			       int		     height,
 			       const cairo_color_t  *color);
 
+cairo_private cairo_surface_t *
+_cairo_surface_create_similar_scratch (cairo_surface_t *other,
+									   cairo_content_t	content,
+									   int		width,
+									   int		height);
+
 cairo_private void
 _cairo_surface_init (cairo_surface_t			*surface,
 		     const cairo_surface_backend_t	*backend,

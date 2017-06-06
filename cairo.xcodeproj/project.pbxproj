@@ -7,6 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB3A9F191E5C2C0700649B19 /* cairo-gl-composite.c in Sources */ = {isa = PBXBuildFile; fileRef = AB3A9F0D1E5C2C0600649B19 /* cairo-gl-composite.c */; };
+		AB3A9F1A1E5C2C0700649B19 /* cairo-gl-device.c in Sources */ = {isa = PBXBuildFile; fileRef = AB3A9F0E1E5C2C0700649B19 /* cairo-gl-device.c */; };
+		AB3A9F1B1E5C2C0700649B19 /* cairo-gl-dispatch.c in Sources */ = {isa = PBXBuildFile; fileRef = AB3A9F101E5C2C0700649B19 /* cairo-gl-dispatch.c */; };
+		AB3A9F1C1E5C2C0700649B19 /* cairo-gl-glyphs.c in Sources */ = {isa = PBXBuildFile; fileRef = AB3A9F121E5C2C0700649B19 /* cairo-gl-glyphs.c */; };
+		AB3A9F1D1E5C2C0700649B19 /* cairo-gl-info.c in Sources */ = {isa = PBXBuildFile; fileRef = AB3A9F131E5C2C0700649B19 /* cairo-gl-info.c */; };
+		AB3A9F1E1E5C2C0700649B19 /* cairo-gl-msaa-compositor.c in Sources */ = {isa = PBXBuildFile; fileRef = AB3A9F141E5C2C0700649B19 /* cairo-gl-msaa-compositor.c */; };
+		AB3A9F1F1E5C2C0700649B19 /* cairo-gl-operand.c in Sources */ = {isa = PBXBuildFile; fileRef = AB3A9F151E5C2C0700649B19 /* cairo-gl-operand.c */; };
+		AB3A9F201E5C2C0700649B19 /* cairo-gl-shaders.c in Sources */ = {isa = PBXBuildFile; fileRef = AB3A9F161E5C2C0700649B19 /* cairo-gl-shaders.c */; };
+		AB3A9F211E5C2C0700649B19 /* cairo-gl-spans-compositor.c in Sources */ = {isa = PBXBuildFile; fileRef = AB3A9F171E5C2C0700649B19 /* cairo-gl-spans-compositor.c */; };
+		AB3A9F221E5C2C0700649B19 /* cairo-gl-traps-compositor.c in Sources */ = {isa = PBXBuildFile; fileRef = AB3A9F181E5C2C0700649B19 /* cairo-gl-traps-compositor.c */; };
+		AB3A9F291E5C2C5300649B19 /* cairo-gl-source.c in Sources */ = {isa = PBXBuildFile; fileRef = AB3A9F241E5C2C5300649B19 /* cairo-gl-source.c */; };
+		AB3A9F2A1E5C2C5300649B19 /* cairo-gl-surface.c in Sources */ = {isa = PBXBuildFile; fileRef = AB3A9F251E5C2C5300649B19 /* cairo-gl-surface.c */; };
+		AB3A9F2B1E5C2C5300649B19 /* cairo-gl-gradient.c in Sources */ = {isa = PBXBuildFile; fileRef = AB3A9F281E5C2C5300649B19 /* cairo-gl-gradient.c */; };
+		AB3A9F2D1E5C2C6200649B19 /* cairo-nsgles-context.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3A9F2C1E5C2C6200649B19 /* cairo-nsgles-context.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AB3A9F2F1E5C2D0A00649B19 /* cairo-gl-dispatch-private.h in Sources */ = {isa = PBXBuildFile; fileRef = AB3A9F0F1E5C2C0700649B19 /* cairo-gl-dispatch-private.h */; };
+		AB3A9F301E5C2D0A00649B19 /* cairo-gl-ext-def-private.h in Sources */ = {isa = PBXBuildFile; fileRef = AB3A9F111E5C2C0700649B19 /* cairo-gl-ext-def-private.h */; };
+		AB3A9F311E5C2D0A00649B19 /* cairo-gl-private.h in Sources */ = {isa = PBXBuildFile; fileRef = AB3A9F261E5C2C5300649B19 /* cairo-gl-private.h */; };
+		AB3A9F321E5C2D0A00649B19 /* cairo-gl-gradient-private.h in Sources */ = {isa = PBXBuildFile; fileRef = AB3A9F271E5C2C5300649B19 /* cairo-gl-gradient-private.h */; };
+		AB3A9F3E1E5C359300649B19 /* libpixman.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB3A9F3D1E5C359300649B19 /* libpixman.a */; };
 		BDFF7F721D9E0E9E0056051D /* cairo-analysis-surface.c in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7E961D9E0E9D0056051D /* cairo-analysis-surface.c */; };
 		BDFF7F731D9E0E9E0056051D /* cairo-arc.c in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7E981D9E0E9D0056051D /* cairo-arc.c */; };
 		BDFF7F741D9E0E9E0056051D /* cairo-array.c in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7E9A1D9E0E9D0056051D /* cairo-array.c */; };
@@ -140,6 +159,28 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AB3A9F0D1E5C2C0600649B19 /* cairo-gl-composite.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "cairo-gl-composite.c"; sourceTree = "<group>"; };
+		AB3A9F0E1E5C2C0700649B19 /* cairo-gl-device.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "cairo-gl-device.c"; sourceTree = "<group>"; };
+		AB3A9F0F1E5C2C0700649B19 /* cairo-gl-dispatch-private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "cairo-gl-dispatch-private.h"; sourceTree = "<group>"; };
+		AB3A9F101E5C2C0700649B19 /* cairo-gl-dispatch.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "cairo-gl-dispatch.c"; sourceTree = "<group>"; };
+		AB3A9F111E5C2C0700649B19 /* cairo-gl-ext-def-private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "cairo-gl-ext-def-private.h"; sourceTree = "<group>"; };
+		AB3A9F121E5C2C0700649B19 /* cairo-gl-glyphs.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "cairo-gl-glyphs.c"; sourceTree = "<group>"; };
+		AB3A9F131E5C2C0700649B19 /* cairo-gl-info.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "cairo-gl-info.c"; sourceTree = "<group>"; };
+		AB3A9F141E5C2C0700649B19 /* cairo-gl-msaa-compositor.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "cairo-gl-msaa-compositor.c"; sourceTree = "<group>"; };
+		AB3A9F151E5C2C0700649B19 /* cairo-gl-operand.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "cairo-gl-operand.c"; sourceTree = "<group>"; };
+		AB3A9F161E5C2C0700649B19 /* cairo-gl-shaders.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "cairo-gl-shaders.c"; sourceTree = "<group>"; };
+		AB3A9F171E5C2C0700649B19 /* cairo-gl-spans-compositor.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "cairo-gl-spans-compositor.c"; sourceTree = "<group>"; };
+		AB3A9F181E5C2C0700649B19 /* cairo-gl-traps-compositor.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "cairo-gl-traps-compositor.c"; sourceTree = "<group>"; };
+		AB3A9F231E5C2C2C00649B19 /* cairo-gl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "cairo-gl.h"; sourceTree = "<group>"; };
+		AB3A9F241E5C2C5300649B19 /* cairo-gl-source.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "cairo-gl-source.c"; sourceTree = "<group>"; };
+		AB3A9F251E5C2C5300649B19 /* cairo-gl-surface.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "cairo-gl-surface.c"; sourceTree = "<group>"; };
+		AB3A9F261E5C2C5300649B19 /* cairo-gl-private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "cairo-gl-private.h"; sourceTree = "<group>"; };
+		AB3A9F271E5C2C5300649B19 /* cairo-gl-gradient-private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "cairo-gl-gradient-private.h"; sourceTree = "<group>"; };
+		AB3A9F281E5C2C5300649B19 /* cairo-gl-gradient.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "cairo-gl-gradient.c"; sourceTree = "<group>"; };
+		AB3A9F2C1E5C2C6200649B19 /* cairo-nsgles-context.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "cairo-nsgles-context.m"; sourceTree = "<group>"; };
+		AB3A9F2E1E5C2CA800649B19 /* config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+		AB3A9F331E5C2D6500649B19 /* cairoint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cairoint.h; sourceTree = "<group>"; };
+		AB3A9F3D1E5C359300649B19 /* libpixman.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpixman.a; path = "../pixman-0.34.0-iOS/build/Debug-iphoneos/libpixman.a"; sourceTree = "<group>"; };
 		BDFF7E841D9E0D810056051D /* libcairo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libcairo.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDFF7E941D9E0E730056051D /* pixman.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pixman.h; path = pixman/pixman.h; sourceTree = "<group>"; };
 		BDFF7E951D9E0E9D0056051D /* cairo-analysis-surface-private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "cairo-analysis-surface-private.h"; sourceTree = "<group>"; };
@@ -359,9 +400,7 @@
 		BDFF7F6C1D9E0E9E0056051D /* cairo-wideint.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "cairo-wideint.c"; sourceTree = "<group>"; };
 		BDFF7F6D1D9E0E9E0056051D /* cairo.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cairo.c; sourceTree = "<group>"; };
 		BDFF7F6E1D9E0E9E0056051D /* cairo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cairo.h; sourceTree = "<group>"; };
-		BDFF7F6F1D9E0E9E0056051D /* cairoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cairoint.h; sourceTree = "<group>"; };
 		BDFF7F701D9E0E9E0056051D /* check-link.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "check-link.c"; sourceTree = "<group>"; };
-		BDFF7F711D9E0E9E0056051D /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
 		BDFF7FE81D9E0FEF0056051D /* cairo-version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "cairo-version.h"; sourceTree = SOURCE_ROOT; };
 		BDFF7FE91D9E10130056051D /* pixman-version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "pixman-version.h"; path = "pixman/pixman-version.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -371,18 +410,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB3A9F3E1E5C359300649B19 /* libpixman.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB3A9F3C1E5C359200649B19 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AB3A9F3D1E5C359300649B19 /* libpixman.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BDFF7E7B1D9E0D810056051D = {
 			isa = PBXGroup;
 			children = (
 				BDFF7E921D9E0E220056051D /* pixman */,
 				BDFF7E861D9E0D810056051D /* cairo */,
 				BDFF7E851D9E0D810056051D /* Products */,
+				AB3A9F3C1E5C359200649B19 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -614,10 +663,29 @@
 				BDFF7F6B1D9E0E9E0056051D /* cairo-wideint-type-private.h */,
 				BDFF7F6C1D9E0E9E0056051D /* cairo-wideint.c */,
 				BDFF7F6D1D9E0E9E0056051D /* cairo.c */,
+				AB3A9F331E5C2D6500649B19 /* cairoint.h */,
 				BDFF7F6E1D9E0E9E0056051D /* cairo.h */,
-				BDFF7F6F1D9E0E9E0056051D /* cairoint.h */,
+				AB3A9F231E5C2C2C00649B19 /* cairo-gl.h */,
+				AB3A9F2E1E5C2CA800649B19 /* config.h */,
 				BDFF7F701D9E0E9E0056051D /* check-link.c */,
-				BDFF7F711D9E0E9E0056051D /* config.h */,
+				AB3A9F0D1E5C2C0600649B19 /* cairo-gl-composite.c */,
+				AB3A9F0E1E5C2C0700649B19 /* cairo-gl-device.c */,
+				AB3A9F0F1E5C2C0700649B19 /* cairo-gl-dispatch-private.h */,
+				AB3A9F101E5C2C0700649B19 /* cairo-gl-dispatch.c */,
+				AB3A9F111E5C2C0700649B19 /* cairo-gl-ext-def-private.h */,
+				AB3A9F121E5C2C0700649B19 /* cairo-gl-glyphs.c */,
+				AB3A9F131E5C2C0700649B19 /* cairo-gl-info.c */,
+				AB3A9F141E5C2C0700649B19 /* cairo-gl-msaa-compositor.c */,
+				AB3A9F151E5C2C0700649B19 /* cairo-gl-operand.c */,
+				AB3A9F161E5C2C0700649B19 /* cairo-gl-shaders.c */,
+				AB3A9F171E5C2C0700649B19 /* cairo-gl-spans-compositor.c */,
+				AB3A9F181E5C2C0700649B19 /* cairo-gl-traps-compositor.c */,
+				AB3A9F241E5C2C5300649B19 /* cairo-gl-source.c */,
+				AB3A9F251E5C2C5300649B19 /* cairo-gl-surface.c */,
+				AB3A9F261E5C2C5300649B19 /* cairo-gl-private.h */,
+				AB3A9F271E5C2C5300649B19 /* cairo-gl-gradient-private.h */,
+				AB3A9F281E5C2C5300649B19 /* cairo-gl-gradient.c */,
+				AB3A9F2C1E5C2C6200649B19 /* cairo-nsgles-context.m */,
 			);
 			path = cairo;
 			sourceTree = "<group>";
@@ -806,6 +874,24 @@
 				BDFF7FC51D9E0E9E0056051D /* cairo-scaled-font.c in Sources */,
 				BDFF7FDE1D9E0E9E0056051D /* cairo-type1-fallback.c in Sources */,
 				BDFF7FDC1D9E0E9E0056051D /* cairo-tristrip.c in Sources */,
+				AB3A9F191E5C2C0700649B19 /* cairo-gl-composite.c in Sources */,
+				AB3A9F1A1E5C2C0700649B19 /* cairo-gl-device.c in Sources */,
+				AB3A9F2F1E5C2D0A00649B19 /* cairo-gl-dispatch-private.h in Sources */,
+				AB3A9F1B1E5C2C0700649B19 /* cairo-gl-dispatch.c in Sources */,
+				AB3A9F301E5C2D0A00649B19 /* cairo-gl-ext-def-private.h in Sources */,
+				AB3A9F1C1E5C2C0700649B19 /* cairo-gl-glyphs.c in Sources */,
+				AB3A9F1D1E5C2C0700649B19 /* cairo-gl-info.c in Sources */,
+				AB3A9F1E1E5C2C0700649B19 /* cairo-gl-msaa-compositor.c in Sources */,
+				AB3A9F1F1E5C2C0700649B19 /* cairo-gl-operand.c in Sources */,
+				AB3A9F201E5C2C0700649B19 /* cairo-gl-shaders.c in Sources */,
+				AB3A9F211E5C2C0700649B19 /* cairo-gl-spans-compositor.c in Sources */,
+				AB3A9F221E5C2C0700649B19 /* cairo-gl-traps-compositor.c in Sources */,
+				AB3A9F291E5C2C5300649B19 /* cairo-gl-source.c in Sources */,
+				AB3A9F2A1E5C2C5300649B19 /* cairo-gl-surface.c in Sources */,
+				AB3A9F311E5C2D0A00649B19 /* cairo-gl-private.h in Sources */,
+				AB3A9F321E5C2D0A00649B19 /* cairo-gl-gradient-private.h in Sources */,
+				AB3A9F2B1E5C2C5300649B19 /* cairo-gl-gradient.c in Sources */,
+				AB3A9F2D1E5C2C6200649B19 /* cairo-nsgles-context.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -961,6 +1047,7 @@
 				BDFF7E8F1D9E0D810056051D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

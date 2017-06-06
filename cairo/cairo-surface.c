@@ -604,6 +604,33 @@ cairo_surface_create_similar_image (cairo_surface_t  *other,
 }
 slim_hidden_def (cairo_surface_create_similar_image);
 
+cairo_surface_t *
+_cairo_surface_create_similar_scratch (cairo_surface_t *other,
+									   cairo_content_t	content,
+									   int		width,
+									   int		height)
+{
+	cairo_surface_t *surface;
+	
+	if (unlikely (other->status))
+		return _cairo_surface_create_in_error (other->status);
+	
+	surface = NULL;
+	if (other->backend->create_similar)
+		surface = other->backend->create_similar (other, content, width, height);
+	if (surface == NULL)
+		surface = cairo_surface_create_similar_image (other,
+													  _cairo_format_from_content (content),
+													  width, height);
+	
+	if (unlikely (surface->status))
+		return surface;
+	
+	_cairo_surface_copy_similar_properties (surface, other);
+	
+	return surface;
+}
+
 /**
  * _cairo_surface_map_to_image:
  * @surface: an existing surface used to extract the image from
