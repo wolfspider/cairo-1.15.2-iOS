@@ -113,9 +113,16 @@ _nsgles_swap_buffers (void *abstract_ctx,
 		    cairo_gl_surface_t *abstract_surface)
 {
     cairo_nsgles_context_t *ctx = (cairo_nsgles_context_t *) abstract_ctx;
+	GLsync fence = NULL;
+	
+	
+	glClientWaitSyncAPPLE(fence, GL_SYNC_FLUSH_COMMANDS_BIT_APPLE, GL_TIMEOUT_IGNORED_APPLE);
 	
 	glBindRenderbuffer(GL_RENDERBUFFER, colorRenderbuffer);
 	[ctx->context presentRenderbuffer:(GL_RENDERBUFFER)];
+	
+	fence = glFenceSyncAPPLE(GL_SYNC_GPU_COMMANDS_COMPLETE_APPLE, 0);
+
 	
 	//[ctx->context flushBuffer];
 

@@ -407,6 +407,8 @@ _cairo_gl_ensure_framebuffer (cairo_gl_context_t *ctx,
 					ctx->tex_target,
 					surface->tex,
 					0);
+	
+	glResolveMultisampleFramebufferAPPLE();
 
 #if CAIRO_HAS_GL_SURFACE
     glDrawBuffer (GL_COLOR_ATTACHMENT0);
@@ -494,6 +496,8 @@ _cairo_gl_ensure_msaa_depth_stencil_buffer (cairo_gl_context_t *ctx,
 					      _get_depth_stencil_format (ctx),
 					      surface->width,
 					      surface->height);
+	
+	glResolveMultisampleFramebufferAPPLE();
 
 #if CAIRO_HAS_GL_SURFACE
     if (ctx->gl_flavor == CAIRO_GL_FLAVOR_DESKTOP) {

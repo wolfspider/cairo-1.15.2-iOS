@@ -283,12 +283,12 @@ _cairo_gl_gradient_create (cairo_gl_context_t           *ctx,
      * must match 'format' in glTexImage2D.
      */
     if (_cairo_gl_get_flavor () == CAIRO_GL_FLAVOR_ES)
-	internal_format = GL_BGRA;
+		internal_format = GL_RGBA;
     else
 	internal_format = GL_RGBA;
 
     glTexImage2D (ctx->tex_target, 0, internal_format, tex_width, 1, 0,
-		  GL_BGRA, GL_UNSIGNED_BYTE, data);
+		  GL_RGBA, GL_UNSIGNED_BYTE, data);
 
     free (data);
 
