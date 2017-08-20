@@ -263,14 +263,14 @@ _cairo_gl_context_init (cairo_gl_context_t *ctx)
 
 #if CAIRO_HAS_GLESV2_SURFACE && defined(GL_MAX_SAMPLES_EXT)
     if (ctx->has_packed_depth_stencil &&
-	_cairo_gl_has_extension ("GL_EXT_multisampled_render_to_texture")) {
+	_cairo_gl_has_extension ("GL_APPLE_APPLE_framebuffer_multisample")) {
 	glGetIntegerv(GL_MAX_SAMPLES_EXT, &ctx->num_samples);
     }
 #endif
 
 #if CAIRO_HAS_GLESV2_SURFACE && defined(GL_MAX_SAMPLES_IMG)
     if (ctx->has_packed_depth_stencil &&
-	_cairo_gl_has_extension ("GL_IMG_multisampled_render_to_texture")) {
+	_cairo_gl_has_extension ("GL_APPLE_APPLE_framebuffer_multisample")) {
 	glGetIntegerv(GL_MAX_SAMPLES_IMG, &ctx->num_samples);
     }
 #endif
