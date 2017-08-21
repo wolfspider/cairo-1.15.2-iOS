@@ -37,6 +37,8 @@
 
 #define CAIRO_HAS_NSGLES_FUNCTIONS 1
 
+/* #define CAIRO_HAS_QUARTZ_FONT 1 */
+
 #define CAIRO_GL_COMPOSITOR "msaa"
 
 /* Define to 1 if libspectre is available */
