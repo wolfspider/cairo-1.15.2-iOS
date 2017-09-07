@@ -40,6 +40,7 @@
 #include "cairo.h"
 
 #if CAIRO_HAS_QUARTZ_SURFACE
+#include "CoreGraphics/CoreGraphics.h"
 #include "CoreText/CoreText.h"
 
 CAIRO_BEGIN_DECLS

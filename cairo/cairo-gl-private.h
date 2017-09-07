@@ -482,7 +482,8 @@ _cairo_gl_context_release (cairo_gl_context_t *ctx, cairo_status_t status)
 
     err = _cairo_gl_get_error ();
 
-    if (unlikely (err)) {
+	
+	if (unlikely (err)) {
         cairo_status_t new_status;
 	new_status = _cairo_error (CAIRO_STATUS_DEVICE_ERROR);
         if (status == CAIRO_STATUS_SUCCESS)

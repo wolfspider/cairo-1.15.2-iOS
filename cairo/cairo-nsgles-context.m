@@ -90,6 +90,7 @@ static void
 _nsgles_release (void *abstract_ctx)
 {
     /* no-op */
+	
 }
 
 static void

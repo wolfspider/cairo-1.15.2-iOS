@@ -22,6 +22,8 @@
 		AB3A9F2B1E5C2C5300649B19 /* cairo-gl-gradient.c in Sources */ = {isa = PBXBuildFile; fileRef = AB3A9F281E5C2C5300649B19 /* cairo-gl-gradient.c */; };
 		AB3A9F2D1E5C2C6200649B19 /* cairo-nsgles-context.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3A9F2C1E5C2C6200649B19 /* cairo-nsgles-context.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		AB88D94B1F4A34A90089016E /* cairo-quartz-font.c in Sources */ = {isa = PBXBuildFile; fileRef = AB88D9481F4A34A90089016E /* cairo-quartz-font.c */; };
+		ABB161191F60BD1200840625 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB161181F60BD1200840625 /* CoreGraphics.framework */; };
+		ABB1611D1F60C4E500840625 /* cairo-quartz-surface.c in Sources */ = {isa = PBXBuildFile; fileRef = ABB161161F60BB4300840625 /* cairo-quartz-surface.c */; };
 		ABD75F651F4A88CE00656744 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABD75F641F4A88CE00656744 /* CoreText.framework */; };
 		ABD75F6A1F4A8C0E00656744 /* libpixman.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABD75F681F4A8BFF00656744 /* libpixman.a */; };
 		BDFF7F721D9E0E9E0056051D /* cairo-analysis-surface.c in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7E961D9E0E9D0056051D /* cairo-analysis-surface.c */; };
@@ -179,10 +181,12 @@
 		AB3A9F2E1E5C2CA800649B19 /* config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
 		AB3A9F331E5C2D6500649B19 /* cairoint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cairoint.h; sourceTree = "<group>"; };
 		AB3A9F3D1E5C359300649B19 /* libpixman.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpixman.a; path = "../pixman-0.34.0-iOS/build/Debug-iphoneos/libpixman.a"; sourceTree = "<group>"; };
-		AB88D9481F4A34A90089016E /* cairo-quartz-font.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c; fileEncoding = 4; path = "cairo-quartz-font.c"; sourceTree = "<group>"; };
+		AB88D9481F4A34A90089016E /* cairo-quartz-font.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "cairo-quartz-font.c"; sourceTree = "<group>"; };
 		AB88D9491F4A34A90089016E /* cairo-quartz-private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "cairo-quartz-private.h"; sourceTree = "<group>"; };
 		AB88D94A1F4A34A90089016E /* cairo-quartz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "cairo-quartz.h"; sourceTree = "<group>"; };
 		AB88D94E1F4A39030089016E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		ABB161161F60BB4300840625 /* cairo-quartz-surface.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "cairo-quartz-surface.c"; sourceTree = "<group>"; };
+		ABB161181F60BD1200840625 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		ABD75F641F4A88CE00656744 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		ABD75F681F4A8BFF00656744 /* libpixman.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libpixman.a; sourceTree = "<group>"; };
 		BDFF7E841D9E0D810056051D /* libcairo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libcairo.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -415,6 +419,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABD75F6A1F4A8C0E00656744 /* libpixman.a in Frameworks */,
+				ABB161191F60BD1200840625 /* CoreGraphics.framework in Frameworks */,
 				ABD75F651F4A88CE00656744 /* CoreText.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,6 +430,7 @@
 		AB3A9F3C1E5C359200649B19 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ABB161181F60BD1200840625 /* CoreGraphics.framework */,
 				ABD75F641F4A88CE00656744 /* CoreText.framework */,
 				AB88D94E1F4A39030089016E /* UIKit.framework */,
 				AB3A9F3D1E5C359300649B19 /* libpixman.a */,
@@ -694,6 +700,7 @@
 				AB3A9F271E5C2C5300649B19 /* cairo-gl-gradient-private.h */,
 				AB3A9F281E5C2C5300649B19 /* cairo-gl-gradient.c */,
 				AB88D9481F4A34A90089016E /* cairo-quartz-font.c */,
+				ABB161161F60BB4300840625 /* cairo-quartz-surface.c */,
 				AB88D9491F4A34A90089016E /* cairo-quartz-private.h */,
 				AB88D94A1F4A34A90089016E /* cairo-quartz.h */,
 				AB3A9F2C1E5C2C6200649B19 /* cairo-nsgles-context.m */,
@@ -899,6 +906,7 @@
 				AB3A9F2A1E5C2C5300649B19 /* cairo-gl-surface.c in Sources */,
 				AB3A9F2B1E5C2C5300649B19 /* cairo-gl-gradient.c in Sources */,
 				AB88D94B1F4A34A90089016E /* cairo-quartz-font.c in Sources */,
+				ABB1611D1F60C4E500840625 /* cairo-quartz-surface.c in Sources */,
 				AB3A9F2D1E5C2C6200649B19 /* cairo-nsgles-context.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

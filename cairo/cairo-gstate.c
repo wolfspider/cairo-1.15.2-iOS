@@ -2009,7 +2009,7 @@ _cairo_gstate_show_text_glyphs (cairo_gstate_t		   *gstate,
      *
      * Needless to say, do this only if show_text_glyphs is not available. */
     if (cairo_surface_has_show_text_glyphs (gstate->target) ||
-	_cairo_scaled_font_get_max_scale (gstate->scaled_font) <= 10240)
+	_cairo_scaled_font_get_max_scale (gstate->scaled_font) <= 256)
     {
 
 	if (info != NULL) {
