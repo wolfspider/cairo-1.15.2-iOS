@@ -89,8 +89,7 @@ _nsgles_acquire (void *abstract_ctx)
 static void
 _nsgles_release (void *abstract_ctx)
 {
-    /* no-op */
-	
+	//NO-OP
 }
 
 static void
@@ -207,8 +206,6 @@ cairo_gl_surface_create_for_view (cairo_device_t	*device,
 			    CAIRO_CONTENT_COLOR_ALPHA, width, height);
 	
 	surface->view = [[GLKView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-	
-	//surface->view = (GLKView *)abstract_view;
 
     return &surface->base.base;
 }

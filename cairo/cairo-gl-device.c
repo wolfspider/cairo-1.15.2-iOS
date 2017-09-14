@@ -364,7 +364,7 @@ _cairo_gl_ensure_msaa_gles_framebuffer (cairo_gl_context_t *ctx,
 {
     if (surface->msaa_active)
 	return;
-
+	
     ctx->dispatch.FramebufferTexture2DMultisample(GL_FRAMEBUFFER,
 						  GL_COLOR_ATTACHMENT0,
 						  ctx->tex_target,
@@ -407,8 +407,8 @@ _cairo_gl_ensure_framebuffer (cairo_gl_context_t *ctx,
 					ctx->tex_target,
 					surface->tex,
 					0);
-	
-	glResolveMultisampleFramebufferAPPLE();
+		
+	//glResolveMultisampleFramebufferAPPLE();
 
 #if CAIRO_HAS_GL_SURFACE
     glDrawBuffer (GL_COLOR_ATTACHMENT0);
@@ -497,7 +497,7 @@ _cairo_gl_ensure_msaa_depth_stencil_buffer (cairo_gl_context_t *ctx,
 					      surface->width,
 					      surface->height);
 	
-	glResolveMultisampleFramebufferAPPLE();
+	//glResolveMultisampleFramebufferAPPLE();
 
 #if CAIRO_HAS_GL_SURFACE
     if (ctx->gl_flavor == CAIRO_GL_FLAVOR_DESKTOP) {

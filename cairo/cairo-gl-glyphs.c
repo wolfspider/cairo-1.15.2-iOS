@@ -332,7 +332,7 @@ render_glyphs (cairo_gl_surface_t *dst,
 	y2 = y1 + scaled_glyph->surface->height;
 
 	glyph = _cairo_gl_glyph_cache_lock (cache, scaled_glyph);
-	emit (ctx,
+	emit(ctx,
 	      x1, y1, x2, y2,
 	      glyph->p1.x, glyph->p1.y,
 	      glyph->p2.x, glyph->p2.y);

@@ -667,7 +667,7 @@ _cairo_quartz_init_glyph_surface (cairo_quartz_scaled_font_t *font,
 
     //fprintf (stderr, "glyphRect[n]: %f %f %f %f\n", glyphRect.origin.x, glyphRect.origin.y, glyphRect.size.width, glyphRect.size.height);
 
-    surface = (cairo_image_surface_t*) cairo_image_surface_create (CAIRO_FORMAT_A8, width, height);
+    surface = (cairo_image_surface_t*) cairo_image_surface_create (CAIRO_FORMAT_ARGB32, width, height);
     if (surface->base.status)
 	return surface->base.status;
 
@@ -714,6 +714,7 @@ _cairo_quartz_init_glyph_surface (cairo_quartz_scaled_font_t *font,
 	}
 
 	CGContextSetAlpha (cgContext, 1.0);
+		//CGContextShowGlyphsAtPositions(cgContext, &glyph, &glyphOrigin, 1);
 	CGContextShowGlyphsAtPoint (cgContext, - glyphOrigin.x, - glyphOrigin.y, &glyph, 1);
 
 	CGContextRelease (cgContext);

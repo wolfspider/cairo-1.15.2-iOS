@@ -2045,8 +2045,9 @@ _cairo_quartz_cg_glyphs (const cairo_compositor_t *compositor,
     /* Translate to the first glyph's position before drawing */
     CGContextTranslateCTM (state.cgMaskContext, glyphs[0].x, glyphs[0].y);
     CGContextConcatCTM (state.cgMaskContext, textTransform);
-
-    CGContextShowGlyphsWithAdvances (state.cgMaskContext,
+	
+	
+	CGContextShowGlyphsWithAdvances (state.cgMaskContext,
 				     cg_glyphs,
 				     cg_advances,
 				     num_glyphs);
