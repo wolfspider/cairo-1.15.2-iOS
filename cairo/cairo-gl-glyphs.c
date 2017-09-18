@@ -231,7 +231,7 @@ render_glyphs (cairo_gl_surface_t *dst,
     cairo_format_t last_format = CAIRO_FORMAT_INVALID;
     cairo_gl_glyph_cache_t *cache = NULL;
     cairo_gl_context_t *ctx;
-    cairo_gl_emit_glyph_t emit;
+    cairo_gl_emit_glyph_t emit = NULL;
     cairo_gl_composite_t setup;
     cairo_int_status_t status;
     int i = 0;

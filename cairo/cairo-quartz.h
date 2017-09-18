@@ -33,27 +33,28 @@
  *      Vladimir Vukicevic <vladimir@mozilla.com>
  */
 
-
 #ifndef CAIRO_QUARTZ_H
 #define CAIRO_QUARTZ_H
 
 #include "cairo.h"
 
 #if CAIRO_HAS_QUARTZ_SURFACE
-#include "CoreGraphics/CoreGraphics.h"
-#include "CoreText/CoreText.h"
+
+// #include <ApplicationServices/ApplicationServices.h>
+#include <QuartzCore/QuartzCore.h>
+#include <CoreText/CoreText.h>
 
 CAIRO_BEGIN_DECLS
 
 cairo_public cairo_surface_t *
 cairo_quartz_surface_create (cairo_format_t format,
-                             unsigned int width,
-                             unsigned int height);
+							 unsigned int width,
+							 unsigned int height);
 
 cairo_public cairo_surface_t *
 cairo_quartz_surface_create_for_cg_context (CGContextRef cgContext,
-                                            unsigned int width,
-                                            unsigned int height);
+											unsigned int width,
+											unsigned int height);
 
 cairo_public CGContextRef
 cairo_quartz_surface_get_cg_context (cairo_surface_t *surface);

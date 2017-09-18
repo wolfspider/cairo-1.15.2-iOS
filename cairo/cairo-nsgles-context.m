@@ -90,6 +90,7 @@ static void
 _nsgles_release (void *abstract_ctx)
 {
 	//NO-OP
+	
 }
 
 static void
@@ -117,6 +118,8 @@ _nsgles_swap_buffers (void *abstract_ctx,
 	[ctx->context presentRenderbuffer:(GL_RENDERBUFFER)];
 	
 	fence = glFenceSyncAPPLE(GL_SYNC_GPU_COMMANDS_COMPLETE_APPLE, 0);
+	
+	glDeleteSyncAPPLE(fence);
 
 }
 

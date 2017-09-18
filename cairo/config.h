@@ -49,6 +49,8 @@
 /* Define to 1 to enable cairo's symbol-lookup feature */
 /* #undef CAIRO_HAS_SYMBOL_LOOKUP */
 
+#define CAIRO_HAS_SYMBOL_LOOKUP
+
 /* Define to 1 to enable cairo's test surfaces feature */
 /* #undef CAIRO_HAS_TEST_SURFACES */
 
@@ -64,7 +66,7 @@
 /* #undef FLOAT_WORDS_BIGENDIAN */
 
 /* Enable pixman glyph cache */
-#define HAS_PIXMAN_GLYPHS 1
+/* #undef HAS_PIXMAN_GLYPHS 1 */
 
 /* Define to 1 if you have the `alarm' function. */
 #define HAVE_ALARM 1

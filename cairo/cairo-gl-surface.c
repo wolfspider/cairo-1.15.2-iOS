@@ -474,6 +474,10 @@ _cairo_gl_surface_create_scratch (cairo_gl_context_t   *ctx,
 
     glTexImage2D (ctx->tex_target, 0, format, width, height, 0,
 		  format, GL_UNSIGNED_BYTE, NULL);
+	
+	GLenum GLstatus;
+	
+	GLstatus = _cairo_gl_get_error();
 
     return &surface->base;
 }
@@ -787,6 +791,49 @@ _cairo_gl_surface_fill_alpha_channel (cairo_gl_surface_t *dst,
     return status;
 }
 
+static void _cairo_gl_surface_draw_paint (cairo_surface_t *tmp, cairo_gl_surface_t *dst, cairo_image_surface_t *src, cairo_gl_context_t *ctx, int dst_x, int dst_y, int src_x, int src_y, int width, int height)
+{
+	cairo_status_t status = CAIRO_STATUS_SUCCESS;
+	
+	
+	tmp = _cairo_gl_surface_create_scratch (ctx,
+											dst->base.content,
+											width, height);
+	
+	if (unlikely (tmp->status))
+		return;
+	
+	status = _cairo_gl_surface_draw_image ((cairo_gl_surface_t *) tmp,
+										   src,
+										   src_x, src_y,
+										   width, height,
+										   0, 0);
+	
+	if (status == CAIRO_INT_STATUS_SUCCESS) {
+		cairo_surface_pattern_t tmp_pattern;
+		cairo_rectangle_int_t r;
+		cairo_clip_t *clip;
+		
+		_cairo_pattern_init_for_surface (&tmp_pattern, tmp);
+		cairo_matrix_init_translate (&tmp_pattern.base.matrix,
+									 -dst_x, -dst_y);
+		tmp_pattern.base.filter = CAIRO_FILTER_NEAREST;
+		tmp_pattern.base.extend = CAIRO_EXTEND_NONE;
+		
+		r.x = dst_x;
+		r.y = dst_y;
+		r.width = width;
+		r.height = height;
+		clip = _cairo_clip_intersect_rectangle (NULL, &r);
+		status = _cairo_surface_paint (&dst->base,
+									   CAIRO_OPERATOR_SOURCE,
+									   &tmp_pattern.base,
+									   clip);
+		_cairo_clip_destroy (clip);
+		_cairo_pattern_fini (&tmp_pattern.base);
+	}
+}
+
 cairo_status_t
 _cairo_gl_surface_draw_image (cairo_gl_surface_t *dst,
 			      cairo_image_surface_t *src,
@@ -799,7 +846,8 @@ _cairo_gl_surface_draw_image (cairo_gl_surface_t *dst,
     cairo_image_surface_t *clone = NULL;
     cairo_gl_context_t *ctx;
     int cpp;
-    cairo_int_status_t status = CAIRO_INT_STATUS_SUCCESS;
+    cairo_status_t status = CAIRO_STATUS_SUCCESS;
+	GLenum GLstatus;
 
     status = _cairo_gl_context_acquire (dst->base.device, &ctx);
     if (unlikely (status))
@@ -877,7 +925,8 @@ _cairo_gl_surface_draw_image (cairo_gl_surface_t *dst,
 	glTexParameteri (ctx->tex_target, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
 	glTexSubImage2D (ctx->tex_target, 0,
 			 dst_x, dst_y, width, height,
-			 format, type, data_start);
+					 format, type, data_start);
+	GLstatus = _cairo_gl_get_error();
 
 	free (data_start_gles2);
 
@@ -889,50 +938,17 @@ _cairo_gl_surface_draw_image (cairo_gl_surface_t *dst,
 	    _cairo_gl_surface_fill_alpha_channel (dst, ctx,
 						  dst_x, dst_y,
 						  width, height);
-	}
-    } else {
-        cairo_surface_t *tmp;
+	} }
+     else {
+        cairo_surface_t *tmp = NULL;
 
-        tmp = _cairo_gl_surface_create_scratch (ctx,
-                                                dst->base.content,
-                                                width, height);
-        if (unlikely (tmp->status))
-            goto FAIL;
-
-        status = _cairo_gl_surface_draw_image ((cairo_gl_surface_t *) tmp,
-                                               src,
-                                               src_x, src_y,
-                                               width, height,
-                                               0, 0);
-        if (status == CAIRO_INT_STATUS_SUCCESS) {
-            cairo_surface_pattern_t tmp_pattern;
-	    cairo_rectangle_int_t r;
-	    cairo_clip_t *clip;
-
-            _cairo_pattern_init_for_surface (&tmp_pattern, tmp);
-	    cairo_matrix_init_translate (&tmp_pattern.base.matrix,
-					 -dst_x, -dst_y);
-	    tmp_pattern.base.filter = CAIRO_FILTER_NEAREST;
-	    tmp_pattern.base.extend = CAIRO_EXTEND_NONE;
-
-	    r.x = dst_x;
-	    r.y = dst_y;
-	    r.width = width;
-	    r.height = height;
-	    clip = _cairo_clip_intersect_rectangle (NULL, &r);
-	    status = _cairo_surface_paint (&dst->base,
-					   CAIRO_OPERATOR_SOURCE,
-					   &tmp_pattern.base,
-					   clip);
-	    _cairo_clip_destroy (clip);
-            _cairo_pattern_fini (&tmp_pattern.base);
-        }
-
+		 _cairo_gl_surface_draw_paint(tmp, dst, src, ctx, dst_x, dst_y, src_x, src_y, width, height);
+		
         cairo_surface_destroy (tmp);
     }
 
 FAIL:
-    status = _cairo_gl_context_release (ctx, status);
+    //status = _cairo_gl_context_release (ctx, status);
 
     if (clone)
         cairo_surface_destroy (&clone->base);

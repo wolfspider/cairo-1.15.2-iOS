@@ -478,11 +478,12 @@ _cairo_gl_context_acquire (cairo_device_t *device,
 static cairo_always_inline cairo_warn cairo_status_t
 _cairo_gl_context_release (cairo_gl_context_t *ctx, cairo_status_t status)
 {
-    //GLenum err;
-
-    //err = _cairo_gl_get_error ();
-
 	/*
+	GLenum err;
+
+    err = _cairo_gl_get_error ();
+
+	
 	if (unlikely (err)) {
         cairo_status_t new_status;
 	new_status = _cairo_error (CAIRO_STATUS_DEVICE_ERROR);
