@@ -39,7 +39,7 @@
 
 #define CAIRO_HAS_QUARTZ_SURFACE 1
 
-#define CAIRO_HAS_QUARTZ_FONT 1 
+#define CAIRO_HAS_FT_FONT 1
 
 #define CAIRO_GL_COMPOSITOR "msaa"
 
@@ -65,8 +65,10 @@
    significant word first */
 /* #undef FLOAT_WORDS_BIGENDIAN */
 
+#define CAIRO_HAS_PNG_FUNCTIONS 1
+
 /* Enable pixman glyph cache */
-/* #undef HAS_PIXMAN_GLYPHS 1 */
+#define HAS_PIXMAN_GLYPHS 1
 
 /* Define to 1 if you have the `alarm' function. */
 #define HAVE_ALARM 1

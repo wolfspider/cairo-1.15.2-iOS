@@ -3251,14 +3251,14 @@ cairo_show_text (cairo_t *cr, const char *utf8)
 	return;
 
     i = NULL;
-    //if (has_show_text_glyphs) {
+    if (has_show_text_glyphs) {
 	info.utf8 = utf8;
 	info.utf8_len = utf8_len;
 	info.clusters = clusters;
 	info.num_clusters = num_clusters;
 	info.cluster_flags = cluster_flags;
 	i = &info;
-    //}
+    }
 
     status = cr->backend->glyphs (cr, glyphs, num_glyphs, i);
     if (unlikely (status))

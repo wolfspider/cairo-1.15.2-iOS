@@ -420,7 +420,7 @@ _cairo_gl_surface_create_scratch_for_texture (cairo_gl_context_t   *ctx,
     glBindTexture (ctx->tex_target, surface->tex);
     glTexParameteri (ctx->tex_target, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
     glTexParameteri (ctx->tex_target, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
-
+	
     return &surface->base;
 }
 
@@ -473,7 +473,7 @@ _cairo_gl_surface_create_scratch (cairo_gl_context_t   *ctx,
     }
 
     glTexImage2D (ctx->tex_target, 0, format, width, height, 0,
-		  format, GL_UNSIGNED_BYTE, NULL);
+		  GL_BGRA_EXT, GL_UNSIGNED_BYTE, NULL);
 	
 	GLenum GLstatus;
 	
@@ -925,7 +925,7 @@ _cairo_gl_surface_draw_image (cairo_gl_surface_t *dst,
 	glTexParameteri (ctx->tex_target, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
 	glTexSubImage2D (ctx->tex_target, 0,
 			 dst_x, dst_y, width, height,
-					 format, type, data_start);
+					 GL_BGRA_EXT, type, data_start);
 	GLstatus = _cairo_gl_get_error();
 
 	free (data_start_gles2);

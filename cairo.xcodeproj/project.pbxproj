@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB278CB21FD62CFA003E8C15 /* cairo-ft-font.c in Sources */ = {isa = PBXBuildFile; fileRef = AB278CB01FD62CF8003E8C15 /* cairo-ft-font.c */; };
+		AB278CB31FD62D2E003E8C15 /* cairo-ft-private.h in Sources */ = {isa = PBXBuildFile; fileRef = AB278CAF1FD62CF7003E8C15 /* cairo-ft-private.h */; };
+		AB278CB41FD62D32003E8C15 /* cairo-ft.h in Sources */ = {isa = PBXBuildFile; fileRef = AB278CB11FD62CF9003E8C15 /* cairo-ft.h */; };
+		AB278CBD1FD62DD2003E8C15 /* libFreetype2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB278CBA1FD62D75003E8C15 /* libFreetype2.a */; };
 		AB3A9F191E5C2C0700649B19 /* cairo-gl-composite.c in Sources */ = {isa = PBXBuildFile; fileRef = AB3A9F0D1E5C2C0600649B19 /* cairo-gl-composite.c */; };
 		AB3A9F1A1E5C2C0700649B19 /* cairo-gl-device.c in Sources */ = {isa = PBXBuildFile; fileRef = AB3A9F0E1E5C2C0700649B19 /* cairo-gl-device.c */; };
 		AB3A9F1B1E5C2C0700649B19 /* cairo-gl-dispatch.c in Sources */ = {isa = PBXBuildFile; fileRef = AB3A9F101E5C2C0700649B19 /* cairo-gl-dispatch.c */; };
@@ -21,11 +25,14 @@
 		AB3A9F2A1E5C2C5300649B19 /* cairo-gl-surface.c in Sources */ = {isa = PBXBuildFile; fileRef = AB3A9F251E5C2C5300649B19 /* cairo-gl-surface.c */; };
 		AB3A9F2B1E5C2C5300649B19 /* cairo-gl-gradient.c in Sources */ = {isa = PBXBuildFile; fileRef = AB3A9F281E5C2C5300649B19 /* cairo-gl-gradient.c */; };
 		AB3A9F2D1E5C2C6200649B19 /* cairo-nsgles-context.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3A9F2C1E5C2C6200649B19 /* cairo-nsgles-context.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		AB88D94B1F4A34A90089016E /* cairo-quartz-font.c in Sources */ = {isa = PBXBuildFile; fileRef = AB88D9481F4A34A90089016E /* cairo-quartz-font.c */; };
 		ABB161191F60BD1200840625 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB161181F60BD1200840625 /* CoreGraphics.framework */; };
-		ABB1611D1F60C4E500840625 /* cairo-quartz-surface.c in Sources */ = {isa = PBXBuildFile; fileRef = ABB161161F60BB4300840625 /* cairo-quartz-surface.c */; };
+		ABC803D81FD7A3B4002745E9 /* cairo-quartz-surface.c in Sources */ = {isa = PBXBuildFile; fileRef = ABB161161F60BB4300840625 /* cairo-quartz-surface.c */; };
+		ABC803DA1FD7A3B9002745E9 /* cairo-quartz-private.h in Sources */ = {isa = PBXBuildFile; fileRef = AB88D9491F4A34A90089016E /* cairo-quartz-private.h */; };
+		ABC803DB1FD7A3C7002745E9 /* cairo-quartz.h in Sources */ = {isa = PBXBuildFile; fileRef = AB88D94A1F4A34A90089016E /* cairo-quartz.h */; };
+		ABC804871FDA1468002745E9 /* libpixman-a.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABC804771FDA13FF002745E9 /* libpixman-a.a */; };
 		ABD75F651F4A88CE00656744 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABD75F641F4A88CE00656744 /* CoreText.framework */; };
-		ABD75F6A1F4A8C0E00656744 /* libpixman.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABD75F681F4A8BFF00656744 /* libpixman.a */; };
+		ABE989391FDA33A900303F5D /* libpng.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABC804841FDA1418002745E9 /* libpng.a */; };
+		ABE9893C1FDA342E00303F5D /* cairo-png.c in Sources */ = {isa = PBXBuildFile; fileRef = ABC803DE1FD8F548002745E9 /* cairo-png.c */; };
 		BDFF7F721D9E0E9E0056051D /* cairo-analysis-surface.c in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7E961D9E0E9D0056051D /* cairo-analysis-surface.c */; };
 		BDFF7F731D9E0E9E0056051D /* cairo-arc.c in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7E981D9E0E9D0056051D /* cairo-arc.c */; };
 		BDFF7F741D9E0E9E0056051D /* cairo-array.c in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7E9A1D9E0E9D0056051D /* cairo-array.c */; };
@@ -146,6 +153,51 @@
 		BDFF7FE71D9E0E9E0056051D /* check-link.c in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7F701D9E0E9E0056051D /* check-link.c */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		AB278CB91FD62D75003E8C15 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AB278CB51FD62D75003E8C15 /* freetype2.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6382B1B10FB0FC5100ECAC02;
+			remoteInfo = Freetype2;
+		};
+		ABC804761FDA13FF002745E9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABC804721FDA13FE002745E9 /* pixman-a.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = ABC803E91FDA07FD002745E9;
+			remoteInfo = "pixman-a";
+		};
+		ABC8047F1FDA1418002745E9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABC804781FDA1417002745E9 /* libpng.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D07F2C80486CC7A007CD1D0;
+			remoteInfo = "mac-libpng";
+		};
+		ABC804811FDA1418002745E9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABC804781FDA1417002745E9 /* libpng.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A55DFB7815EBB44B007CCF00;
+			remoteInfo = "mac-static-libpng";
+		};
+		ABC804831FDA1418002745E9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABC804781FDA1417002745E9 /* libpng.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A5A58CFD17CF7FBE00B64330;
+			remoteInfo = "ios-static-libpng";
+		};
+		ABC804851FDA1418002745E9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABC804781FDA1417002745E9 /* libpng.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A5BFDB9C1A97359D007A9234;
+			remoteInfo = "libpng-test";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		BDFF7E821D9E0D810056051D /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -159,6 +211,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AB278CAF1FD62CF7003E8C15 /* cairo-ft-private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "cairo-ft-private.h"; sourceTree = "<group>"; };
+		AB278CB01FD62CF8003E8C15 /* cairo-ft-font.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "cairo-ft-font.c"; sourceTree = "<group>"; };
+		AB278CB11FD62CF9003E8C15 /* cairo-ft.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "cairo-ft.h"; sourceTree = "<group>"; };
+		AB278CB51FD62D75003E8C15 /* freetype2.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = freetype2.xcodeproj; path = "../../freetype2-ios/freetype2.xcodeproj"; sourceTree = "<group>"; };
 		AB3A9F0D1E5C2C0600649B19 /* cairo-gl-composite.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "cairo-gl-composite.c"; sourceTree = "<group>"; };
 		AB3A9F0E1E5C2C0700649B19 /* cairo-gl-device.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "cairo-gl-device.c"; sourceTree = "<group>"; };
 		AB3A9F0F1E5C2C0700649B19 /* cairo-gl-dispatch-private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "cairo-gl-dispatch-private.h"; sourceTree = "<group>"; };
@@ -187,6 +243,9 @@
 		AB88D94E1F4A39030089016E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		ABB161161F60BB4300840625 /* cairo-quartz-surface.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "cairo-quartz-surface.c"; sourceTree = "<group>"; };
 		ABB161181F60BD1200840625 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		ABC803DE1FD8F548002745E9 /* cairo-png.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "cairo-png.c"; sourceTree = "<group>"; };
+		ABC804721FDA13FE002745E9 /* pixman-a.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "pixman-a.xcodeproj"; path = "../../pixman-a/pixman-a.xcodeproj"; sourceTree = "<group>"; };
+		ABC804781FDA1417002745E9 /* libpng.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libpng.xcodeproj; path = ../lpng1634/projects/xcode/libpng.xcodeproj; sourceTree = "<group>"; };
 		ABD75F641F4A88CE00656744 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		ABD75F681F4A8BFF00656744 /* libpixman.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libpixman.a; sourceTree = "<group>"; };
 		BDFF7E841D9E0D810056051D /* libcairo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libcairo.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -418,7 +477,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABD75F6A1F4A8C0E00656744 /* libpixman.a in Frameworks */,
+				ABE989391FDA33A900303F5D /* libpng.a in Frameworks */,
+				ABC804871FDA1468002745E9 /* libpixman-a.a in Frameworks */,
+				AB278CBD1FD62DD2003E8C15 /* libFreetype2.a in Frameworks */,
 				ABB161191F60BD1200840625 /* CoreGraphics.framework in Frameworks */,
 				ABD75F651F4A88CE00656744 /* CoreText.framework in Frameworks */,
 			);
@@ -427,6 +488,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB278CB61FD62D75003E8C15 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AB278CBA1FD62D75003E8C15 /* libFreetype2.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		AB3A9F3C1E5C359200649B19 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -438,9 +507,31 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		ABC804731FDA13FE002745E9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ABC804771FDA13FF002745E9 /* libpixman-a.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ABC804791FDA1417002745E9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ABC804801FDA1418002745E9 /* libpng.framework */,
+				ABC804821FDA1418002745E9 /* libpng.a */,
+				ABC804841FDA1418002745E9 /* libpng.a */,
+				ABC804861FDA1418002745E9 /* libpng-test.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		BDFF7E7B1D9E0D810056051D = {
 			isa = PBXGroup;
 			children = (
+				ABC804781FDA1417002745E9 /* libpng.xcodeproj */,
+				ABC804721FDA13FE002745E9 /* pixman-a.xcodeproj */,
+				AB278CB51FD62D75003E8C15 /* freetype2.xcodeproj */,
 				ABD75F681F4A8BFF00656744 /* libpixman.a */,
 				BDFF7E921D9E0E220056051D /* pixman */,
 				BDFF7E861D9E0D810056051D /* cairo */,
@@ -588,6 +679,7 @@
 				BDFF7F111D9E0E9E0056051D /* cairo-pdf-surface-private.h */,
 				BDFF7F121D9E0E9E0056051D /* cairo-pdf.h */,
 				BDFF7F131D9E0E9E0056051D /* cairo-pen.c */,
+				ABC803DE1FD8F548002745E9 /* cairo-png.c */,
 				BDFF7F141D9E0E9E0056051D /* cairo-pixman-private.h */,
 				BDFF7F151D9E0E9E0056051D /* cairo-polygon-intersect.c */,
 				BDFF7F161D9E0E9E0056051D /* cairo-polygon-reduce.c */,
@@ -703,6 +795,9 @@
 				ABB161161F60BB4300840625 /* cairo-quartz-surface.c */,
 				AB88D9491F4A34A90089016E /* cairo-quartz-private.h */,
 				AB88D94A1F4A34A90089016E /* cairo-quartz.h */,
+				AB278CB01FD62CF8003E8C15 /* cairo-ft-font.c */,
+				AB278CAF1FD62CF7003E8C15 /* cairo-ft-private.h */,
+				AB278CB11FD62CF9003E8C15 /* cairo-ft.h */,
 				AB3A9F2C1E5C2C6200649B19 /* cairo-nsgles-context.m */,
 			);
 			path = cairo;
@@ -762,12 +857,71 @@
 			mainGroup = BDFF7E7B1D9E0D810056051D;
 			productRefGroup = BDFF7E851D9E0D810056051D /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = AB278CB61FD62D75003E8C15 /* Products */;
+					ProjectRef = AB278CB51FD62D75003E8C15 /* freetype2.xcodeproj */;
+				},
+				{
+					ProductGroup = ABC804791FDA1417002745E9 /* Products */;
+					ProjectRef = ABC804781FDA1417002745E9 /* libpng.xcodeproj */;
+				},
+				{
+					ProductGroup = ABC804731FDA13FE002745E9 /* Products */;
+					ProjectRef = ABC804721FDA13FE002745E9 /* pixman-a.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				BDFF7E831D9E0D810056051D /* cairo */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		AB278CBA1FD62D75003E8C15 /* libFreetype2.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libFreetype2.a;
+			remoteRef = AB278CB91FD62D75003E8C15 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		ABC804771FDA13FF002745E9 /* libpixman-a.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libpixman-a.a";
+			remoteRef = ABC804761FDA13FF002745E9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		ABC804801FDA1418002745E9 /* libpng.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = libpng.framework;
+			remoteRef = ABC8047F1FDA1418002745E9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		ABC804821FDA1418002745E9 /* libpng.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libpng.a;
+			remoteRef = ABC804811FDA1418002745E9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		ABC804841FDA1418002745E9 /* libpng.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libpng.a;
+			remoteRef = ABC804831FDA1418002745E9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		ABC804861FDA1418002745E9 /* libpng-test.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "libpng-test.xctest";
+			remoteRef = ABC804851FDA1418002745E9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BDFF7E801D9E0D810056051D /* Sources */ = {
@@ -845,6 +999,7 @@
 				BDFF7FA61D9E0E9E0056051D /* cairo-mono-scan-converter.c in Sources */,
 				BDFF7FE11D9E0E9E0056051D /* cairo-type3-glyph-surface.c in Sources */,
 				BDFF7FA31D9E0E9E0056051D /* cairo-mempool.c in Sources */,
+				ABE9893C1FDA342E00303F5D /* cairo-png.c in Sources */,
 				BDFF7F731D9E0E9E0056051D /* cairo-arc.c in Sources */,
 				BDFF7FDD1D9E0E9E0056051D /* cairo-truetype-subset.c in Sources */,
 				BDFF7FC01D9E0E9E0056051D /* cairo-rectangle.c in Sources */,
@@ -905,8 +1060,12 @@
 				AB3A9F291E5C2C5300649B19 /* cairo-gl-source.c in Sources */,
 				AB3A9F2A1E5C2C5300649B19 /* cairo-gl-surface.c in Sources */,
 				AB3A9F2B1E5C2C5300649B19 /* cairo-gl-gradient.c in Sources */,
-				AB88D94B1F4A34A90089016E /* cairo-quartz-font.c in Sources */,
-				ABB1611D1F60C4E500840625 /* cairo-quartz-surface.c in Sources */,
+				AB278CB21FD62CFA003E8C15 /* cairo-ft-font.c in Sources */,
+				AB278CB31FD62D2E003E8C15 /* cairo-ft-private.h in Sources */,
+				AB278CB41FD62D32003E8C15 /* cairo-ft.h in Sources */,
+				ABC803D81FD7A3B4002745E9 /* cairo-quartz-surface.c in Sources */,
+				ABC803DA1FD7A3B9002745E9 /* cairo-quartz-private.h in Sources */,
+				ABC803DB1FD7A3C7002745E9 /* cairo-quartz.h in Sources */,
 				AB3A9F2D1E5C2C6200649B19 /* cairo-nsgles-context.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1016,7 +1175,9 @@
 				);
 				HEADER_SEARCH_PATHS = (
 					cairo,
-					pixman,
+					"\"$(SRCROOT)/../lpng1634/projects/xcode\"",
+					"\"$(SRCROOT)/../../pixman-a/pixman-a\"",
+					"\"$(SRCROOT)/../../freetype2-ios/include\"",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LIBRARY_SEARCH_PATHS = (
@@ -1041,7 +1202,9 @@
 				);
 				HEADER_SEARCH_PATHS = (
 					cairo,
-					pixman,
+					"\"$(SRCROOT)/../lpng1634/projects/xcode\"",
+					"\"$(SRCROOT)/../../pixman-a/pixman-a\"",
+					"\"$(SRCROOT)/../../freetype2-ios/include\"",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LIBRARY_SEARCH_PATHS = (

@@ -286,9 +286,12 @@ _cairo_gl_gradient_create (cairo_gl_context_t           *ctx,
 		internal_format = GL_RGBA;
     else
 	internal_format = GL_RGBA;
+	
+	glTexParameteri(ctx->tex_target, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+	glTexParameteri(ctx->tex_target, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
 
     glTexImage2D (ctx->tex_target, 0, internal_format, tex_width, 1, 0,
-		  GL_RGBA, GL_UNSIGNED_BYTE, data);
+		  GL_BGRA_EXT, GL_UNSIGNED_BYTE, data);
 
     free (data);
 

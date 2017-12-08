@@ -746,7 +746,8 @@ static inline void
 _cairo_gl_composite_draw_triangles (cairo_gl_context_t *ctx,
 				    unsigned int count)
 {
-    if (! ctx->pre_shader) {
+	
+	if (! ctx->pre_shader) {
         glDrawArrays (GL_TRIANGLES, 0, count);
     } else {
         cairo_gl_shader_t *prev_shader = ctx->current_shader;

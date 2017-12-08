@@ -133,7 +133,7 @@ _cairo_clip_destroy (cairo_clip_t *clip)
     if (clip->path != NULL)
 	_cairo_clip_path_destroy (clip->path);
 
-    if (clip->boxes != &clip->embedded_box)
+    if (clip->boxes != &clip->embedded_box && clip->boxes != NULL)
 	free (clip->boxes);
     cairo_region_destroy (clip->region);
 
