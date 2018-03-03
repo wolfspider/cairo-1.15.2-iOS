@@ -3225,6 +3225,8 @@ cairo_show_text (cairo_t *cr, const char *utf8)
 
     has_show_text_glyphs =
 	cairo_surface_has_show_text_glyphs (cairo_get_target (cr));
+	
+	has_show_text_glyphs = TRUE;
 
     glyphs = stack_glyphs;
     num_glyphs = ARRAY_LENGTH (stack_glyphs);

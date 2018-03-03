@@ -68,7 +68,7 @@
 #define CAIRO_HAS_PNG_FUNCTIONS 1
 
 /* Enable pixman glyph cache */
-#define HAS_PIXMAN_GLYPHS 1
+/* #undef HAS_PIXMAN_GLYPHS 1 */
 
 /* Define to 1 if you have the `alarm' function. */
 #define HAVE_ALARM 1

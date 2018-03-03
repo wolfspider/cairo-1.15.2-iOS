@@ -247,7 +247,6 @@
 		ABC804721FDA13FE002745E9 /* pixman-a.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "pixman-a.xcodeproj"; path = "../../pixman-a/pixman-a.xcodeproj"; sourceTree = "<group>"; };
 		ABC804781FDA1417002745E9 /* libpng.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libpng.xcodeproj; path = ../lpng1634/projects/xcode/libpng.xcodeproj; sourceTree = "<group>"; };
 		ABD75F641F4A88CE00656744 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
-		ABD75F681F4A8BFF00656744 /* libpixman.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libpixman.a; sourceTree = "<group>"; };
 		BDFF7E841D9E0D810056051D /* libcairo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libcairo.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDFF7E941D9E0E730056051D /* pixman.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pixman.h; path = pixman/pixman.h; sourceTree = "<group>"; };
 		BDFF7E951D9E0E9D0056051D /* cairo-analysis-surface-private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "cairo-analysis-surface-private.h"; sourceTree = "<group>"; };
@@ -532,7 +531,6 @@
 				ABC804781FDA1417002745E9 /* libpng.xcodeproj */,
 				ABC804721FDA13FE002745E9 /* pixman-a.xcodeproj */,
 				AB278CB51FD62D75003E8C15 /* freetype2.xcodeproj */,
-				ABD75F681F4A8BFF00656744 /* libpixman.a */,
 				BDFF7E921D9E0E220056051D /* pixman */,
 				BDFF7E861D9E0D810056051D /* cairo */,
 				BDFF7E851D9E0D810056051D /* Products */,
@@ -1164,6 +1162,7 @@
 		BDFF7E8E1D9E0D810056051D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -1193,6 +1192,7 @@
 		BDFF7E8F1D9E0D810056051D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"CAIRO_VERSION_MAJOR=1",
 					"CAIRO_VERSION_MICRO=2",
