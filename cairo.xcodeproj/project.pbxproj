@@ -10,7 +10,6 @@
 		AB278CB21FD62CFA003E8C15 /* cairo-ft-font.c in Sources */ = {isa = PBXBuildFile; fileRef = AB278CB01FD62CF8003E8C15 /* cairo-ft-font.c */; };
 		AB278CB31FD62D2E003E8C15 /* cairo-ft-private.h in Sources */ = {isa = PBXBuildFile; fileRef = AB278CAF1FD62CF7003E8C15 /* cairo-ft-private.h */; };
 		AB278CB41FD62D32003E8C15 /* cairo-ft.h in Sources */ = {isa = PBXBuildFile; fileRef = AB278CB11FD62CF9003E8C15 /* cairo-ft.h */; };
-		AB278CBD1FD62DD2003E8C15 /* libFreetype2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB278CBA1FD62D75003E8C15 /* libFreetype2.a */; };
 		AB3A9F191E5C2C0700649B19 /* cairo-gl-composite.c in Sources */ = {isa = PBXBuildFile; fileRef = AB3A9F0D1E5C2C0600649B19 /* cairo-gl-composite.c */; };
 		AB3A9F1A1E5C2C0700649B19 /* cairo-gl-device.c in Sources */ = {isa = PBXBuildFile; fileRef = AB3A9F0E1E5C2C0700649B19 /* cairo-gl-device.c */; };
 		AB3A9F1B1E5C2C0700649B19 /* cairo-gl-dispatch.c in Sources */ = {isa = PBXBuildFile; fileRef = AB3A9F101E5C2C0700649B19 /* cairo-gl-dispatch.c */; };
@@ -29,7 +28,6 @@
 		ABC803D81FD7A3B4002745E9 /* cairo-quartz-surface.c in Sources */ = {isa = PBXBuildFile; fileRef = ABB161161F60BB4300840625 /* cairo-quartz-surface.c */; };
 		ABC803DA1FD7A3B9002745E9 /* cairo-quartz-private.h in Sources */ = {isa = PBXBuildFile; fileRef = AB88D9491F4A34A90089016E /* cairo-quartz-private.h */; };
 		ABC803DB1FD7A3C7002745E9 /* cairo-quartz.h in Sources */ = {isa = PBXBuildFile; fileRef = AB88D94A1F4A34A90089016E /* cairo-quartz.h */; };
-		ABC804871FDA1468002745E9 /* libpixman-a.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABC804771FDA13FF002745E9 /* libpixman-a.a */; };
 		ABD75F651F4A88CE00656744 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABD75F641F4A88CE00656744 /* CoreText.framework */; };
 		ABE989391FDA33A900303F5D /* libpng.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABC804841FDA1418002745E9 /* libpng.a */; };
 		ABE9893C1FDA342E00303F5D /* cairo-png.c in Sources */ = {isa = PBXBuildFile; fileRef = ABC803DE1FD8F548002745E9 /* cairo-png.c */; };
@@ -154,16 +152,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		AB278CB91FD62D75003E8C15 /* PBXContainerItemProxy */ = {
+		AB1884E2204BB3A8008ED5AE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = AB278CB51FD62D75003E8C15 /* freetype2.xcodeproj */;
+			containerPortal = AB1884DE204BB3A8008ED5AE /* freetype2.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 6382B1B10FB0FC5100ECAC02;
 			remoteInfo = Freetype2;
 		};
-		ABC804761FDA13FF002745E9 /* PBXContainerItemProxy */ = {
+		AB188503204BB9A3008ED5AE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = ABC804721FDA13FE002745E9 /* pixman-a.xcodeproj */;
+			containerPortal = AB1884FA204BB9A3008ED5AE /* pixman-a.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = ABC803E91FDA07FD002745E9;
 			remoteInfo = "pixman-a";
@@ -211,10 +209,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AB1884DE204BB3A8008ED5AE /* freetype2.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = freetype2.xcodeproj; path = "../freetype2-ios-gles/freetype2.xcodeproj"; sourceTree = "<group>"; };
+		AB1884FA204BB9A3008ED5AE /* pixman-a.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "pixman-a.xcodeproj"; path = "../pixman-a/pixman-a.xcodeproj"; sourceTree = "<group>"; };
 		AB278CAF1FD62CF7003E8C15 /* cairo-ft-private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "cairo-ft-private.h"; sourceTree = "<group>"; };
 		AB278CB01FD62CF8003E8C15 /* cairo-ft-font.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "cairo-ft-font.c"; sourceTree = "<group>"; };
 		AB278CB11FD62CF9003E8C15 /* cairo-ft.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "cairo-ft.h"; sourceTree = "<group>"; };
-		AB278CB51FD62D75003E8C15 /* freetype2.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = freetype2.xcodeproj; path = "../../freetype2-ios/freetype2.xcodeproj"; sourceTree = "<group>"; };
 		AB3A9F0D1E5C2C0600649B19 /* cairo-gl-composite.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "cairo-gl-composite.c"; sourceTree = "<group>"; };
 		AB3A9F0E1E5C2C0700649B19 /* cairo-gl-device.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "cairo-gl-device.c"; sourceTree = "<group>"; };
 		AB3A9F0F1E5C2C0700649B19 /* cairo-gl-dispatch-private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "cairo-gl-dispatch-private.h"; sourceTree = "<group>"; };
@@ -244,7 +243,6 @@
 		ABB161161F60BB4300840625 /* cairo-quartz-surface.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "cairo-quartz-surface.c"; sourceTree = "<group>"; };
 		ABB161181F60BD1200840625 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		ABC803DE1FD8F548002745E9 /* cairo-png.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "cairo-png.c"; sourceTree = "<group>"; };
-		ABC804721FDA13FE002745E9 /* pixman-a.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "pixman-a.xcodeproj"; path = "../../pixman-a/pixman-a.xcodeproj"; sourceTree = "<group>"; };
 		ABC804781FDA1417002745E9 /* libpng.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libpng.xcodeproj; path = ../lpng1634/projects/xcode/libpng.xcodeproj; sourceTree = "<group>"; };
 		ABD75F641F4A88CE00656744 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		BDFF7E841D9E0D810056051D /* libcairo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libcairo.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -477,8 +475,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABE989391FDA33A900303F5D /* libpng.a in Frameworks */,
-				ABC804871FDA1468002745E9 /* libpixman-a.a in Frameworks */,
-				AB278CBD1FD62DD2003E8C15 /* libFreetype2.a in Frameworks */,
 				ABB161191F60BD1200840625 /* CoreGraphics.framework in Frameworks */,
 				ABD75F651F4A88CE00656744 /* CoreText.framework in Frameworks */,
 			);
@@ -487,10 +483,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AB278CB61FD62D75003E8C15 /* Products */ = {
+		AB1884DF204BB3A8008ED5AE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AB278CBA1FD62D75003E8C15 /* libFreetype2.a */,
+				AB1884E3204BB3A8008ED5AE /* libFreetype2.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AB1884FB204BB9A3008ED5AE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AB188504204BB9A3008ED5AE /* libpixman-a.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -504,14 +508,6 @@
 				AB3A9F3D1E5C359300649B19 /* libpixman.a */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		ABC804731FDA13FE002745E9 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				ABC804771FDA13FF002745E9 /* libpixman-a.a */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		ABC804791FDA1417002745E9 /* Products */ = {
@@ -528,9 +524,9 @@
 		BDFF7E7B1D9E0D810056051D = {
 			isa = PBXGroup;
 			children = (
+				AB1884FA204BB9A3008ED5AE /* pixman-a.xcodeproj */,
 				ABC804781FDA1417002745E9 /* libpng.xcodeproj */,
-				ABC804721FDA13FE002745E9 /* pixman-a.xcodeproj */,
-				AB278CB51FD62D75003E8C15 /* freetype2.xcodeproj */,
+				AB1884DE204BB3A8008ED5AE /* freetype2.xcodeproj */,
 				BDFF7E921D9E0E220056051D /* pixman */,
 				BDFF7E861D9E0D810056051D /* cairo */,
 				BDFF7E851D9E0D810056051D /* Products */,
@@ -857,16 +853,16 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = AB278CB61FD62D75003E8C15 /* Products */;
-					ProjectRef = AB278CB51FD62D75003E8C15 /* freetype2.xcodeproj */;
+					ProductGroup = AB1884DF204BB3A8008ED5AE /* Products */;
+					ProjectRef = AB1884DE204BB3A8008ED5AE /* freetype2.xcodeproj */;
 				},
 				{
 					ProductGroup = ABC804791FDA1417002745E9 /* Products */;
 					ProjectRef = ABC804781FDA1417002745E9 /* libpng.xcodeproj */;
 				},
 				{
-					ProductGroup = ABC804731FDA13FE002745E9 /* Products */;
-					ProjectRef = ABC804721FDA13FE002745E9 /* pixman-a.xcodeproj */;
+					ProductGroup = AB1884FB204BB9A3008ED5AE /* Products */;
+					ProjectRef = AB1884FA204BB9A3008ED5AE /* pixman-a.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -877,18 +873,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		AB278CBA1FD62D75003E8C15 /* libFreetype2.a */ = {
+		AB1884E3204BB3A8008ED5AE /* libFreetype2.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libFreetype2.a;
-			remoteRef = AB278CB91FD62D75003E8C15 /* PBXContainerItemProxy */;
+			remoteRef = AB1884E2204BB3A8008ED5AE /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		ABC804771FDA13FF002745E9 /* libpixman-a.a */ = {
+		AB188504204BB9A3008ED5AE /* libpixman-a.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = "libpixman-a.a";
-			remoteRef = ABC804761FDA13FF002745E9 /* PBXContainerItemProxy */;
+			remoteRef = AB188503204BB9A3008ED5AE /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		ABC804801FDA1418002745E9 /* libpng.framework */ = {
@@ -1177,6 +1173,8 @@
 					"\"$(SRCROOT)/../lpng1634/projects/xcode\"",
 					"\"$(SRCROOT)/../../pixman-a/pixman-a\"",
 					"\"$(SRCROOT)/../../freetype2-ios/include\"",
+					"\"$(SRCROOT)/../freetype2-ios-gles/include\"",
+					"\"$(SRCROOT)/../pixman-a/pixman-a\"",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LIBRARY_SEARCH_PATHS = (
@@ -1205,6 +1203,8 @@
 					"\"$(SRCROOT)/../lpng1634/projects/xcode\"",
 					"\"$(SRCROOT)/../../pixman-a/pixman-a\"",
 					"\"$(SRCROOT)/../../freetype2-ios/include\"",
+					"\"$(SRCROOT)/../freetype2-ios-gles/include\"",
+					"\"$(SRCROOT)/../pixman-a/pixman-a\"",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LIBRARY_SEARCH_PATHS = (
